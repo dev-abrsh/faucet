@@ -2,7 +2,7 @@ import { API } from "faucetpayjs";
 import { useEffect } from "react";
 
 function App() {
-  const myAPI = new API("0a4fc78441e575124ce17a1500fbc19e05d0aecd");
+  const myAPI = new API(process.env.API_KEY);
   useEffect(() => {
     myAPI.getBalance().then((data) => {
       console.log(data);
